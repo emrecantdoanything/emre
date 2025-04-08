@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-+*1+qx^&!p%dn%cmc1j3s$qd6l^0=(nsl&j)y*ct5!3eeet49p')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+DEBUG = True  # Geçici olarak True yapıyoruz
 
 ALLOWED_HOSTS = ['*']  # Production'da güvenlik için spesifik domainler belirtilmeli
 
@@ -164,9 +164,9 @@ LOGIN_REDIRECT_URL = 'crm:customer_list'
 LOGOUT_REDIRECT_URL = 'login'
 
 # Security settings
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = False  # Geçici olarak False yapıyoruz
+SESSION_COOKIE_SECURE = False  # Geçici olarak False yapıyoruz
+CSRF_COOKIE_SECURE = False  # Geçici olarak False yapıyoruz
 SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
 X_FRAME_OPTIONS = 'DENY'
